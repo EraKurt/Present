@@ -1,0 +1,117 @@
+*,html,body/*This means we are going to style everything inside , bcs the website has some margins by def*/
+		{
+			margin: 0;
+			padding: 0;
+		}
+
+		html,body
+		{
+			height: 100%
+		}
+		.popup
+		{
+			background:rgba(249,249,249,0.3); /*rgba(254,219,184,0.6)*/
+			width: 100%;
+			height: 100%;
+			position:absolute;
+			margin-top: 0px;
+			display: none;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		.popup-content
+		{
+			height: 320px;
+			width: 500px;
+			background: rgba(29,54,69,0.9) /*rgba(1,92,148,0.9)*/;
+			padding: 20px;
+			border-radius: 10px;
+			position: relative;
+			color: rgba(254,219,184,1);
+		}
+		body
+		{
+			height: 100vh;
+			background-image:linear-gradient(rgba(46, 46, 46, 0.7),rgba(46, 46, 46, 0.7)),url('../Images/wallpaper3.jpg');
+			background-size: cover;  /*rgba(46, 46, 46, 0.5),rgba(46, 46, 46, 0.5)*/
+			background-attachment: fixed;
+		}
+		 input.button2
+		{
+			font-family: "Roboto",sans-serif;
+			text-transform: uppercase;
+			outline: 0;
+			background: rgba(253,208,220,0.9);
+			width: 100%
+			border:0;
+			padding: 15px 50px;
+			color: black;
+			font-size: 14px;
+			cursor: pointer;
+			border-radius: 200px;
+			margin-bottom: 10px;
+		}
+		input.button2:hover
+		{
+			background: black;
+			transition: 0.5s ;
+			color: rgba(253,208,220,0.9)
+		}
+		input.stud
+		{
+			font-family: "Roboto",sans-serif;
+			outline: 1;
+			background: #f2f2f2;
+			width: 100%;
+			border: 0;
+			margin: 0 0 15px;
+			padding: 15px;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+		a
+		{
+			text-decoration-line: none;
+			color: inherit;
+		}
+		button
+		{
+			border-radius: 30px;
+		}
+		#butoni
+		{
+			top: 70px;
+			left: 83%;
+			position: absolute;
+			
+		}
+		.shtoKlase
+		{
+			display: flex;
+		}
+		 button.button2
+		
+		{
+			top: 70px;
+			left: 70%;
+			position: absolute;
+			font-family: "Roboto",sans-serif;
+			text-transform: uppercase;
+			outline: 0;
+			background: rgba(253,208,220,0.9);
+			width: 100%
+			border:0;
+			padding: 15px 50px;
+			color: black;
+			font-size: 14px;
+			cursor: pointer;
+			border-radius: 200px;
+			margin-bottom: 10px;
+		}
+		button.button2:hover
+		{
+			background: black;
+			transition: 0.5s ;
+			color: rgba(253,208,220,0.9)
+		}

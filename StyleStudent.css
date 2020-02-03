@@ -1,0 +1,46 @@
+.lendStud
+{
+	top: 280px;
+	
+	margin-right: 70px;
+	background-color: rgba(253,172,138,0.8);
+	width: 760px;
+	position: absolute;
+	
+	display: inline-block;
+	left: 80px;
+}
+#lendStud1
+{
+	left: 915px;
+	position: absolute;
+
+}
+.lendeMung
+{
+	margin: 20px;
+	margin-left: 38px;
+	padding: 20px;
+	width:640px;
+	border: 1px solid orange;
+	height:200px;
+	position: relative;
+}
+.lendeMung p#emLende
+{
+	font-size: 25px;
+	color: red;
+	text-align: center;
+}
+#infoLenda
+{
+	margin-top: 14px;
+}
+span
+{
+	text-align: center;
+	margin-right:  40px;
+	margin-left: 40px;
+
+	position: relative;
+}
