@@ -17,7 +17,7 @@ include("ShtoStudent.php");
 </head>
 <body>
 <h1>Welcome <?php echo $_SESSION['nmMesues'] ?><?php echo " ".$_SESSION['lnMesues'] ?><br> Add a class</h1>
-<i><a href="logout.php"><button id="butoni" type="submit" name="logout" class="button2">Logout</button></a><a href="Faqja2.php"><button class="button2" type="submit" name="shtoklase">Add class</button></a></i>
+<i><a href="logout.php"><button id="butoni" type="submit" name="logout" class="button2">Logout</button></a><a href="Faqja2.php"><button class="button2" type="submit" name="shtoklase">Add Subject</button></a></i>
 <?php 
 	if(isset($_POST['logout']))
 	{

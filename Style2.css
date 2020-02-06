@@ -535,7 +535,7 @@ a
 .popup
 {
 	background:rgba(249,249,249,0.3); /*rgba(254,219,184,0.6)*/
-	width: 1583px;
+	width: 100%;
 	height: 1000px;
 	position: relative;
 	margin-top: 300px;

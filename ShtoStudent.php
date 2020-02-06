@@ -15,6 +15,7 @@
 			{
 				$row=mysqli_fetch_assoc($result);
 				$_SESSION['emriLendes']=$row['Pershkrimi'];
+				$_SESSION['idLenda']=$row['IdLenda'];
 				header("Location: ShfaqStudentPerLende.php");
 				exit();
 			}

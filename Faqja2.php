@@ -29,7 +29,7 @@
 		#icon
 		{
 			top: 20%;
-			left: 9%;
+			left: 13%;
 			position: absolute;
 			margin: 200px;
 			border:4px solid rgba(239,120,252,0.9);
@@ -48,7 +48,7 @@
 		#icon1
 		{
 			top: 20%;
-			left: 50%;
+			left: 55%;
 			position: absolute;
 			margin: 200px 200px 200px 150px;
 			border:4px solid rgba(3,151,182,0.8);
@@ -205,11 +205,11 @@
 	<form method="post" action="Faqja2.1.php" class="login-form2">
 	<i><button id="butoni" type="submit" name="logout"><a href="logout.php">Logout</a></button></i>
 	<div id="shtoKlase" class="shtoKlase"><a href="#">
-		<div id="icon"><h4>Add a new class</h4>
+		<div id="icon"><h4>Add a new subject</h4>
 		<button id="plus" name="plus2"><a href="#popup">+</a></button>
 		</div></a>
 		<a href="#">
-		<div id="icon1"><h4>Class list</h4><!--Kjo do te na dergoje te ShtoKlase.php , qe ne fakt afishon listen e klasave -->
+		<div id="icon1"><h4>Subject list</h4><!--Kjo do te na dergoje te ShtoKlase.php , qe ne fakt afishon listen e klasave -->
 		<button id="plus1" name="plus1">+</button>
 		</div></a>
 	</div>
