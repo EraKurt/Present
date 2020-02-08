@@ -56,7 +56,7 @@
 <body>
 	<p style="margin-top: 5px;"><h1 style="background-color: rgba(221,255,236,0.2); width: 700px;padding-left: 50px;">Student list for <?php echo $_SESSION['emriLendes'] ?> subject</h1></p>
 
-<i><a href="logout.php"><button id="butoni" type="submit" name="logout" class="button2">Logout</button></a><a href="ShtoKlase.php"><button class="button2" type="submit" name="shtoklase">Show subject</button></a></i>
+<i><a href="logout.php"><button id="butoni" type="submit" name="logout" class="button2" style="left: 85%;">Logout</button></a><a href="ShtoKlase.php"><button class="button2" type="submit" name="shtoklase">Show subject</button></a></i>
 	<div class="shtoKlase" id="shtoKlase" style="margin-bottom: 50px;">
 		<p style="margin-bottom: 30px;padding-bottom: 20px; "><h1 style="padding: 20px;margin-left: 30px"><a href="#popup" id="shto" style="border:1px solid white;background-color: rgba(50,241,222,0.9);padding: 4px;border-radius: 5px;">Add Student</a></h1></p>
 	

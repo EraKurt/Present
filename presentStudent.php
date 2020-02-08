@@ -68,8 +68,8 @@ button.button2:hover
 }
 	</style>
 </head>
-<body>
-	<h1>Welcome <?php echo $_SESSION['emStu'] ?><?php echo " ".$_SESSION['mbStu'] ?></h1>
+<body style="background-color: rgba(254,230,197,0.9);">
+	<h1>Welcome <?php echo $_SESSION['emStu'] ?><?php echo " ".$_SESSION['mbStu'] ?>. Your teacher is <?php echo $_SESSION['myTeacherE'] ?><?php echo " ".$_SESSION['myTeacherM'] ?></h1>
 	<i><a href="logout.php"><button id="butoni" type="submit" name="logout" class="button2">Logout</button></a></i>
 	<form method="post" action="presentStudent.php" style="position: absolute;top: 150px;right: 40px; ">
 		<input type="text" name="search" id="search" placeholder="Search Subject" style="color:black;height: 30px;width:230px;border:1px solid lightblue;background-color: rgba(181,228,240,0.5);">

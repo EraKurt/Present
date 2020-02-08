@@ -21,7 +21,7 @@ include('registration.php');
 				<a href="Present1.php" class="logo"><img src="../Images/logo5.png"></a>
 				<nav>
 					<ul class="list1">
-						<li><a href="Present.html">HOME</a></li>
+						<li><a href="present1.php">HOME</a></li>
 						<li><a href="#n2">ABOUT US</a></li>
 						<li><a href="#n4">CONTACT</a></li>
 						<li><a href="#n4">FEATURES</a></li>

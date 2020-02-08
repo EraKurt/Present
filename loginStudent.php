@@ -24,9 +24,17 @@
 	 				$emri=$row['Emri'];
 	 				$mbiemri=$row['Mbiemri'];
 	 				$id=$row['IdStudent'];
+	 				$idM=$row['IdMesues'];
+	 				$sql1="SELECT * FROM mesues WHERE ID=$idM";
+	 				$res=mysqli_query($conn, $sql1);
+	 				$row1=mysqli_fetch_assoc($res);
+	 				$emM=$row1['firstname'];
+	 				$mbB=$row1['lastname'];
 	 				$_SESSION['emStu']=$emri;
 	 				$_SESSION['mbStu']=$mbiemri;
 	 				$_SESSION['IdStu']=$idStu;
+	 				$_SESSION['myTeacherE']=$emM;
+	 				$_SESSION['myTeacherM']=$mbB;
 	 				header("Location: presentStudent.php?login=success");  
 					exit();
 	 			}

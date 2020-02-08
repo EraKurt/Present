@@ -281,7 +281,7 @@
 		<button id="plus" name="plus2"><a href="#popup">+</a></button>
 		</div></a>
 		<a href="#">
-		<div id="icon1"><h4>Subject list</h4><!--Kjo do te na dergoje te ShtoKlase.php , qe ne fakt afishon listen e klasave -->
+		<div id="icon1"><h4>Subject List</h4><!--Kjo do te na dergoje te ShtoKlase.php , qe ne fakt afishon listen e klasave -->
 		<button id="plus1" name="plus1">+</button>
 		</div></a>
 		<a href="#">
