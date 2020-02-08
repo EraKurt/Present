@@ -8,7 +8,7 @@
 		{
 			height: 100%;
 		}
-		.popup
+		.popup 
 		{
 			background:rgba(249,249,249,0.3); /*rgba(254,219,184,0.6)*/
 			width: 100%;
@@ -19,8 +19,65 @@
 			justify-content: center;
 			align-items: center;
 			text-align: center;
+			
 		}
-		.popup-content
+		.popup2
+		{
+			background:rgba(249,249,249,0.3); /*rgba(254,219,184,0.6)*/
+			width: 100%;
+			height: 150%;
+			top: 150%;
+			position:absolute;
+			margin-top: 0px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			z-index: 1;
+			border-radius: 1px solid white;
+		}
+		.popup3
+		{
+			background:rgba(249,249,249,0.3); /*rgba(254,219,184,0.6)*/
+			width: 100%;
+			height: 100%;
+			top: 300%;
+			position:absolute;
+			margin-top: 50px;
+			margin-bottom: 0px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			z-index: 1;
+			border-radius: 1px solid white;
+		}
+		.popup-content2
+		{
+			height: 500px;
+			width: 400px;
+			background: rgba(29,54,69,0.9) /*rgba(1,92,148,0.9)*/;
+			padding: 20px;
+			border-radius: 10px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-left: 60px;
+			margin-right: 60px;
+			position: relative;
+			color: rgba(254,219,184,1);
+			display: inline-block;
+		}
+		.popup-content3
+		{
+			height: 420px;
+			width: 700px;
+			background: rgba(29,54,69,0.9) /*rgba(1,92,148,0.9)*/;
+			padding: 20px;
+			border-radius: 10px;
+			position: relative;
+			color: black;
+		}
+		.popup-content 
 		{
 			height: 320px;
 			width: 500px;
@@ -29,6 +86,7 @@
 			border-radius: 10px;
 			position: relative;
 			color: rgba(254,219,184,1);
+
 		}
 		body
 		{
@@ -110,7 +168,22 @@
 			border-radius: 200px;
 			margin-bottom: 10px;
 		}
-		button.button2:hover
+		button.button3
+		{
+			font-family: "Roboto",sans-serif;
+			text-transform: uppercase;
+			outline: 0;
+			background: rgba(253,208,220,0.9);
+			width: 100%
+			border:0;
+			padding: 15px 50px;
+			color: black;
+			font-size: 14px;
+			cursor: pointer;
+			border-radius: 200px;
+			margin-bottom: 10px;
+		}
+		button.button2:hover , button.button3:hover
 		{
 			background: black;
 			transition: 0.5s ;
@@ -133,4 +206,6 @@
 		  padding: 10px;
 		  background-color: white;
 		}
+
+
 

@@ -6,14 +6,7 @@ include('registration.php');
 <html>
 <head>
 	<title>Present</title>
-<!--	 Latest compiled and minified CSS 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
- jQuery library 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-Latest compiled JavaScript 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
 	<link rel="stylesheet" type="text/css" href="Style2.css">
 	<link rel="stylesheet" type="text/css" href="css/all.css">
 	<link rel="stylesheet" type="text/css" href="C:\Users\User\Documents\Downloads\fontawesome-free-5.12.0-web\css\all.css">
@@ -117,7 +110,7 @@ Latest compiled JavaScript
 							<input type="id" placeholder="ID" name="student">
 							<input type="password" placeholder="Password" name="password2">
 							<button class="button2" type="submit" name="login-sub2" >Log in</button><br>
-							<p class="s2"><a href="#">Forgot your password?</a></p>
+							<p class="s2"><a href="mailto:yourprof@yahoo.com">Forgot your password?</a></p>
 						</form>
 					</div>
 				</div>

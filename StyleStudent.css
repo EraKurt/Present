@@ -4,7 +4,7 @@
 	
 	margin-right: 70px;
 	background-color: rgba(253,172,138,0.8);
-	width: 760px;
+	width: 960px;
 	position: absolute;
 	
 	display: inline-block;
@@ -12,8 +12,9 @@
 }
 #lendStud1
 {
-	left: 915px;
+	left: 1215px;
 	position: absolute;
+
 
 }
 .lendeMung
@@ -21,12 +22,21 @@
 	margin: 20px;
 	margin-left: 38px;
 	padding: 20px;
-	width:640px;
+	width:840px;
 	border: 1px solid orange;
 	height:200px;
 	position: relative;
 }
-.lendeMung p#emLende
+.lendeMung1
+{
+	margin: 20px;
+	padding: 20px;
+	width:420px;
+	border: 1px solid orange;
+	height:200px;
+	position: relative;
+}
+p.emLende, .lendeMung1 p#emLende
 {
 	font-size: 25px;
 	color: red;
@@ -39,8 +49,13 @@
 span
 {
 	text-align: center;
-	margin-right:  40px;
-	margin-left: 40px;
+	margin-right:  95px;
+	margin-left: 100px;
 
 	position: relative;
+}
+#dJava
+{
+	font-size: 20px;
+	font-family: "Times New Roman";
 }

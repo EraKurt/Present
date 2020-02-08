@@ -104,7 +104,7 @@
 <div class="form-popup1" id="myForm">
 	<div class="form-container1">
   <form action="ShfaqStudentPerLende.php" method="post" >
-    <button style="background-color: lightblue;margin:20px; width: 170px;height: 35px;color: black;cursor: pointer;">Attendance List</button><br>
+   <button  id='atdList' style="background-color: lightblue;margin:20px; width: 190px;height: 35px;color: black;cursor: pointer;"><a href="#popup2">Absence List</a></button><br>
     <div style="width: 220px;border: 1px solid red;height: 300px;position: fixed;bottom: 210px;right: 40px;scroll-behavior: auto;"><label style="font-size: 22px;font-family:'Times New Roman';color: black;right :45px;margin-left: 20px; " >Student_List/Teacher
    		<select style="width: 180px;height: 35px;margin: 10px;margin-bottom: 10px;" name="emra">
     <?php 
@@ -164,7 +164,7 @@
 			}
     	}
     ?>
-    
+    <a href="#popup3"><button type="button" class="btnABC" style="background-color: rgba(200,191,231,0.9);margin:20px; width: 170px;height: 35px;color: red;font-size: 20px; position: fixed;bottom: 80px;right: 35px;cursor: pointer;">Red List</button></a>
      
     <button type="button" class="btn cancel" style="background-color: lightblue;margin:20px; width: 170px;height: 35px;color: black;position: fixed;bottom: 30px;right: 35px;" onclick="closeForm()">Close</button></div>
   
@@ -183,6 +183,180 @@
 		</form>
 	</div>
 </div>
+<div id="popup2" class="popup2">
+	<div class="popup-content2">
+		<h1 style="color: white;">Absence List Seminar</h1>
+		<table border="1">
+			<thead>
+				<th>ID:</th>
+				<th>Fname:</th>
+				<th>Lname:</th>
+				<th>Class:</th>
+				<th>Total absence:</th>
+			</thead>
+			<tbody>
+				<?php 
+					$idLe=$_SESSION['idLend'];
+					$drow="";
+					$sql="SELECT * FROM student INNER JOIN studentlende ON student.IdStudent=studentlende.IdStudent WHERE studentlende.IdLende=$idLe";
+					if($result=mysqli_query($conn,$sql))
+					{
+						if(mysqli_num_rows($result)>0)
+						{
+							while($row=mysqli_fetch_assoc($result))
+							{
+								$drow.="<tr><td>".$row['IdStudent']."</td><td>".$row['Emri']."</td><td>".$row['Mbiemri']."</td><td>".$row['Klasa']."</td>";
+								$idSt=$row['IdStudent'];
+								$sql1="SELECT * FROM seance WHERE IdLende=$idLe AND IdStudent=$idSt AND Tipi='S' AND Present=0";
+								if($res=mysqli_query($conn, $sql1))
+								{
+									$num=mysqli_num_rows($res);
+									//$data=mysqli_fetch_assoc($res);
+									//$tot=$data['total'];
+									$drow.="<td>".$num."</td></tr>";
+								}else echo "Error te sql count : ".mysqli_error($conn);
+							} echo $drow;
+						}
+					}else echo "Error te student inner ".mysqli_error($conn);
+				?>
+			</tbody>
+		</table>
+	</div>
+	<div class="popup-content2">
+		<h1 style="color: white;">Absence List Lab</h1>
+		<table border="1">
+			<thead>
+				<th>ID:</th>
+				<th>Fname:</th>
+				<th>Lname:</th>
+				<th>Class:</th>
+				<th>Total absence:</th>
+			</thead>
+			<tbody>
+				<?php 
+					$idLe=$_SESSION['idLend'];
+					$drow="";
+					$sql="SELECT * FROM student INNER JOIN studentlende ON student.IdStudent=studentlende.IdStudent WHERE studentlende.IdLende=$idLe";
+					if($result=mysqli_query($conn,$sql))
+					{
+						if(mysqli_num_rows($result)>0)
+						{
+							while($row=mysqli_fetch_assoc($result))
+							{
+								$drow.="<tr><td>".$row['IdStudent']."</td><td>".$row['Emri']."</td><td>".$row['Mbiemri']."</td><td>".$row['Klasa']."</td>";
+								$idSt=$row['IdStudent'];
+								$sql1="SELECT * FROM seance WHERE IdLende=$idLe AND IdStudent=$idSt AND Tipi='L' AND Present=0";
+								if($res=mysqli_query($conn, $sql1))
+								{
+									$num=mysqli_num_rows($res);
+									//$data=mysqli_fetch_assoc($res);
+									//$tot=$data['total'];
+									$drow.="<td>".$num."</td></tr>";
+								}else echo "Error te sql count : ".mysqli_error($conn);
+							} echo $drow;
+						}
+					}else echo "Error te student inner ".mysqli_error($conn);
+				?>
+			</tbody>
+		</table>
+	</div>
+	<div class="popup-content2">
+		<h1 style="color: white;">Absence List Final P</h1>
+		<table border="1">
+			<thead>
+				<th>ID:</th>
+				<th>Fname:</th>
+				<th>Lname:</th>
+				<th>Class:</th>
+				<th>Total absence:</th>
+			</thead>
+			<tbody>
+				<?php 
+					$idLe=$_SESSION['idLend'];
+					$drow="";
+					$sql="SELECT * FROM student INNER JOIN studentlende ON student.IdStudent=studentlende.IdStudent WHERE studentlende.IdLende=$idLe";
+					if($result=mysqli_query($conn,$sql))
+					{
+						if(mysqli_num_rows($result)>0)
+						{
+							while($row=mysqli_fetch_assoc($result))
+							{
+								$drow.="<tr><td>".$row['IdStudent']."</td><td>".$row['Emri']."</td><td>".$row['Mbiemri']."</td><td>".$row['Klasa']."</td>";
+								$idSt=$row['IdStudent'];
+								$sql1="SELECT * FROM seance WHERE IdLende=$idLe AND IdStudent=$idSt AND Tipi='FP' AND Present=0";
+								if($res=mysqli_query($conn, $sql1))
+								{
+									$num=mysqli_num_rows($res);
+									//$data=mysqli_fetch_assoc($res);
+									//$tot=$data['total'];
+									$drow.="<td>".$num."</td></tr>";
+								}else echo "Error te sql count : ".mysqli_error($conn);
+							} echo $drow;
+						}
+					}else echo "Error te student inner ".mysqli_error($conn);
+				?>
+			</tbody>
+		</table>
+	</div>
+		<a href="#shtoKlase"><button type="button" class="button3" name="close" id="close2" style="position: absolute;bottom: 30px;left: 30px;">UP</button></a>
+	
+</div>
+<div id="popup3" class="popup3">
+<div class="popup-content3" style="background-color:  rgba(222,254,236,0.8)">
+	<h1 style="color: red;">Red List</h1>
+		<table border="1" style="color: black;">
+			<thead>
+				<th>ID:</th>
+				<th>Fname:</th>
+				<th>Lname:</th>
+				<th>Class:</th>
+				<th>Total absence:</th>
+			</thead>
+			<tbody>
+				<?php 
+					$idLe=$_SESSION['idLend'];
+					$drow="";
+					$sql="SELECT * FROM student INNER JOIN studentlende ON student.IdStudent=studentlende.IdStudent WHERE studentlende.IdLende=$idLe";
+					/*$sqlRed="SELECT  seance.IdStudent, student.Emri, student.Mbiemri, student.Klasa, count(Present)as tot FROM (student INNER JOIN seance ON student.IdStudent=seance.IdStudent)
+					WHERE seance.IdLende=$idLe AND Present=0 GROUP BY seance.IdStudent ORDER BY tot DESC";*/
+					if($resu=mysqli_query($conn, $sql))
+					{
+						if(mysqli_num_rows($resu)>0)
+						{
+							$b=array();
+							while($row=mysqli_fetch_assoc($resu))
+							{
+								$idSt=$row['IdStudent'];
+								$sql1="SELECT * FROM seance WHERE IdLende=$idLe AND IdStudent=$idSt  AND Present=0";
+								if($result=mysqli_query($conn, $sql1))
+								{
+									$num=mysqli_num_rows($result);
+									if($num>1)//per 2 mungesa e siper futet tek red list
+									$b[$idSt]=$num;
+								}else echo "Error seance: ".mysqli_error($conn);
+							}arsort($b);//nga numri me i madh i mungesave te me i vogli
+							foreach ($b as $idS => $totMun) {
+								$sql3="SELECT * FROM student WHERE IdStudent=$idS";
+								if($r=mysqli_query($conn, $sql3))
+								{
+									if(mysqli_num_rows($r)>0)
+									{
+										$row3=mysqli_fetch_assoc($r);
+										$drow.="<tr><td>".$row3['IdStudent']."</td><td>".$row3['Emri']."</td><td>".$row3['Mbiemri']."</td><td>".$row3['Klasa']."</td><td>".$totMun."</td></tr>";
+									}
+								}else echo "Error gjetja stud: ".mysqli_error($conn);
+							}
+							
+								
+						}echo $drow;
+					}
+					else echo "Error B: ".mysqli_error($conn);
+				?>
+			</tbody>
+		</table>
+</div>
+	<a href="#shtoKlase"><button type="button" class="button3" name="close" id="close2" style="position: absolute;bottom: 30px;left: 30px;">UP</button></a>
+</div>
 <script type="text/javascript">
 		document.querySelector("#shto").addEventListener("click",function(){
 			document.querySelector(".popup").style.display="flex";
@@ -192,6 +366,9 @@
 			document.querySelector(".popup").style.display="none";})
 		
 		})
+
+		
+		
 		function openForm() {
 		  document.getElementById("myForm").style.display = "block";
 		}
