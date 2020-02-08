@@ -150,7 +150,7 @@
 			$sqlDel11="DELETE  FROM seance WHERE IdStudent=$studID AND IdLende=$lendeID";
 			if(mysqli_query($conn, $sqlDel11)){
 			
-				$sqlDel22="DELETE FROM studentlende WHERE IdStudent=$studID AND IdLende=$lendeID";
+				$sqlDel22="DELETE FROM studentlende WHERE IdStudent=$studID";
 				if(mysqli_query($conn, $sqlDel22))
 				{
 					$sqlDel33="DELETE FROM student WHERE IdStudent=$studID";
