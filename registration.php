@@ -47,7 +47,7 @@
 		}*/
 		else if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/", $pass))
 		{
-			header("Location: present1.php?error=invalidpassword");
+			header("Location: present1.php?error=AtLeastOneUpperCaseAtLeastOneNumber8Chars+");
 			exit();
 		}
 
